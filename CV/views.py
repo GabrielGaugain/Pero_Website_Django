@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def Cv(request):
+    return render(request, 'CV/index_CV.html')

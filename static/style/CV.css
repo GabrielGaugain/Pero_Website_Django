@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Josefin+Sans&family=Rambla&display=swap');
+
+
+/*=============================
+  ========= GLOBALS ===========
+  =============================*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    color: #283655;
+    background-color: #f7faff;
+    font-family: 'Rambla', 'sans-serif';
+    background-color: #988dc350;
+}
+
+h2,h3{
+    font-family: 'Audiowide','sans-serif';
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-shadow: -1px -1px -1px #283655;
+}
+/*
+li{
+    list-style-type: none;
+}
+*/
+#line{
+    height: 1px;
+    background-color: #212948;
+    
+}
+
+/*=============================
+  ========= HEADER ============
+  =============================*/
+
+.navbar{
+    background-color: #13065a78;
+    color: #ffffff ;
+    opacity: 0,9;
+    height: 42px;
+    transition: 0,7s;
+}
+.navbar-nav{
+    width: 80% !important;
+    margin: 0 auto;
+    justify-content: space-between;
+
+
+}
+
+.navbar li{
+    list-style-type: none;
+}
+
+header{
+    text-align: center;
+    height: 120vh;
+    opacity: 0,5;
+    background: url(../media/brain-future_with_opacity.jpg) no-repeat 50% 50% ;
+    background-size: cover;
+    
+}
+
+h1{
+    padding: 90px 0 10px 0;
+    font-family: "Josefin Sans",'sans-serif';
+    font-size: 4.3em;
+    text-transform: uppercase;
+    
+}
+
+header a{
+    text-decoration: none;
+    color: #283655;
+}
+
+header a:hover{
+    text-decoration: none;
+    color: #180bab;
+}
+
+
+
+
+header h2{
+    padding: 20px 0 50px 0;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.presentation{
+    height: 240px;
+    margin-top: 20px;
+}
+
+.infos{
+    border: 1px solid #212948;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:20px 0;
+}
+
+.photo{
+    border: 1px solid #212948;
+    position: relative;
+
+}
+.photo img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 90%;
+    border-radius: 3px;
+    box-shadow: 0 0 20px #283655;
+}
+
+header .button{
+    margin-top: 45px;
+}
+
+header .button a{
+    padding: 20px 80px;
+    border: 1px solid #212948;
+    width: 300px;
+    color : #283655;
+}
+
+header .button:hover a{
+    background: #b3aca7;
+    color: #e2dedb;
+    transition: all 0.3s ease-in-out;
+
+}
+
+header #line{
+    width: 25%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+
+/*===================================
+  =========== BODY ==================
+  ===================================*/
+
+section h2{
+    margin :  10px 0 5px 10px;
+}
+
+section #line{
+    width: 25%;
+    margin: 10px 0 50px 30px;
+
+}
+
+/*==== SUB Section Skills ====*/
+
+.competence{
+	border: 1px solid #222;
+	margin-top: 20px;
+    margin-bottom: 0px;
+	transition: all 0.3s;
+	position: relative;
+	padding: 10px 10px;
+    background: #5c7cc1;
+    text-align: center;
+
+}
+
+.competence hr{
+    height: 1px;
+    width: 30%;
+    background-color: #283655;
+}
+
+
+
+#skills img{
+    height: 3em;
+    width: 3em;
+    margin: 0 auto;
+
+}
+
+
+
+
+
+
+
+/*==== SUB Section Formations =================================================================================*/
+
+#formations #line{
+    width: 25%;
+    margin: 10px 0 50px 30px;
+
+}
+
+  /* CAROUSEL de bootstrap -------------------------
+  -------------------------------------------------- */
+  
+  /* Carousel base class => from bootstrap example */
+
+
+  .carousel {
+    margin-bottom: 4rem;
+  }
+
+  .carousel h2{
+    color: #283655;
+  }
+
+  .carousel p{
+    color: #283655;
+  }
+
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    margin-top: 20px;
+    height: 50rem;
+    background-color: #777;
+  }
+  .carousel-item  img {
+    opacity: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 50rem;
+  }
+  
+  .carousel-indicators img{
+      min-width: 6%;
+      min-height: 4%;
+      max-width: 6%;
+      max-height: 4%;
+      display:block;
+     opacity: 50%; 
+     margin: 0 1.2em 1.2em;
+  }
+
+  .carousel-indicators img:hover{
+   opacity: 1; 
+}
+
+  /* RESPONSIVE CSS
+  -------------------------------------------------- */
+  
+  @media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  
+  
+  }
+  
+
+
+ /*==== SUB Section Experience =================================================================================*/
+
+  #experiences hr {
+    color: #283655;
+    height: 3px;
+    width: 100%;
+    padding-top: 30px;
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  }
+
+
+
+#experiences h3{
+    font-size: 0.9em;
+}
+
+
+#experiences img{
+    height: 100%;
+    width: 90%;
+    border-radius: 3px;
+    box-shadow: 0 0 20px #283655;
+    margin: 10px 0 20px 0 ;
+
+}
+  
+  /* Thin out the marketing headings */
+  #experiences h3 {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: .05rem;
+    
+  }
+
+  /* RESPONSIVE CSS
+  -------------------------------------------------- */
+
+  @media (min-width: 40em){
+
+    #experiences h3 {
+        font-size: 50px;
+    }
+    
+  }
+
+  @media (min-width: 62em) {
+    #experiences h3 {
+      margin-top: 7rem;
+    }
+  }
+
+
+
+
+/* ================================================== 
+   === Footer de la page ============================ 
+   ================================================== */
+   footer{
+    padding: 10px;
+    margin-top: 30px;
+    color: #ffffff;
+    background-color:#12065a9e;
+    text-align: center;
+}
+
+
+
+
+
+
+

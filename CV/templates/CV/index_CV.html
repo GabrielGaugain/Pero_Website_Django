@@ -1,0 +1,401 @@
+<!-- Load the static path/files for django-->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Gaugain Gabriel</title>
+
+    <!-- lien vers la feuille de stylede bootstrap (dvt) -->
+    <link rel="stylesheet" type="text/css" href="{%  static 'style/bootstrap.min.css' %}" >
+
+    <!-- lien vers la feuille de style perso -->
+    <link rel="stylesheet" type="text/css" href="{%  static 'style/CV.css' %}" >    
+
+    <!-- Lien vers font awesome 4.7.0-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+
+</head>
+
+<body>
+
+
+
+    <header>
+        <!-- Navbar ////////////////////////////////////////////////////-->
+        <nav class="navbar navbar-expand-sm navbar-light fixed-top" id="navbar">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Presentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#formations" class="nav-link">Formation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experiences" class="nav-link">Experience</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Présentation ////////////////////////////////////////////////////-->
+        <div>
+            <h1>Gabriel Gaugain</h1>
+            <div id="line"></div>
+            <h2>Biomedical Engineer</h2>
+            <!-- Container des 3 blocks et du bouton-->
+            <div class="container">
+                <div class="row presentation">
+                    <!-- Colonne des infos perso-->
+                    <div class="col-6 col-md-3 infos">
+                        <h5> <i class="fa fa-user"> 25 ans  </i> </h5>
+                        <h5> <i class="fa fa-map-pin">  56 cours Gambetta, Lyon  </i> </h5>
+                        <h5> <i class="fa fa-phone"> 07.67.57.18.57   </i> </h5>
+                        <h5> <i class="fa fa-envelope">   gabriel.ggain@gmail.com</i> </h5>
+                        <h5> <i class="fa fa-linkedin"><a href="https://www.linkedin.com/in/gaugain-gabriel-179ba7130/">  gaugain-gabriel-179ba7130/</a></i> </h5>
+                        <h5> <i class="fa fa-github"><a href="https://github.com/GabrielGaugain">  Gabriel.Ggn</a></i> </h5>
+                    </div>
+                    <!-- Colonne de text qui s'accualise-->
+                    <div class="d-none d-md-block col-md-6 presentation"><span class="typed">
+                    </span></div>
+
+                    <div class="col-6 col-md-3 photo">
+                        <img src="{% static 'media/photolinkedin.png' %}" alt="Photo Candidat" height="240">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="button">
+                <a href="{% static 'media/CV ENG Gaugain GABRIEL.pdf' %}"> CV en PDF </a>
+            </div>
+
+            <a href="#skills" class="down-button">
+                <span class="fa fa-angle-down"></span>
+            </a>
+
+
+
+    </header> <!-- ================ END HEADER ======================-->
+
+
+    <!-- Compétences ////////////////////////////////////////////////////-->
+    <!-- Via talbeau bootstrap -> test de dyn avec hover -->
+    <section id="skills">
+        <div class="container-fluid">
+
+
+
+            <h2>Compétences / Skills</h2>
+            <div id="line"></div>
+
+            <div class="row ">
+
+
+                <div class="col-12 col-md-4 col-lg-2 langage">
+                    <div class="competence">
+                        <span class="fa fa-language fa-3x"></span>
+                        <h5>Langage</h5>
+                        <hr>
+                        <li><b>Avancé : </b> Français
+                            (langue natale),<br>
+                             Anglais : niveau B1,
+                            séjour d'un an à Londres </li>
+                        <li><b>Intermédiaire : </b> Espagnol A2 : apprentissage au collège/lycée</li>
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2 sc-prog">
+                    <div class="competence">
+                        <span class="fa fa-laptop fa-3x"></span>
+                        <h5>Scientific Programming</h5>
+                        <hr>
+
+                        <li><b>Avancé : </b> Python, Matlab, Latex, Matlab:EEGLAB </li>
+                        <li><b>Intermédiaire : </b> C/C++, python: <em>MNE, sklearn, tensorflow, django, pandas</em> </li>
+                        <li><b>Notions :</b> Labview, linux (bash script)</li>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2 dev">
+                    <div class="competence">
+                        <span class="fa fa-code fa-3x"></span>
+                        <h5>Dev Programming</h5>
+                        <hr>
+                        <li><b>Avancé : </b>Java SE, Java EE, HTML, CSS, SQL (sqLite, MySQL) </li>
+                        <li><b>Intermédiaire : </b>Javascript, Bootstrap, jquery, UML  </li>
+                        <li><b>Notions :</b> Méthodes scrum & agile, PhP</li>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2 neuro">
+                    <div class="competence">
+                        <img src="{% static 'media/icon_cerveau.png' %}" alt="icon cerveau">
+                        <h5>Neurosciences</h5>
+                        <hr>
+                        <li><b>Avancé : </b>EEG, Biologie du Neuronne, modèles mathématiques des réseaux </li>
+                        <li><b>Intermédiaire : </b> IRM, EEG intra, MEG, Imagerie Ultrason, traitement de l'info auditive/visuelle,  maladie de Parkinson  </li>
+                        <li><b>Notions :</b> </li>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2 ml">
+                    <div class="competence">
+                        <img src="{% static 'media/ML_icon2.png' %}" alt="icon cerveau">
+                        <h5>Traitement du signal & Machine Learning (ML)</h5>
+                        <hr>
+                        <li><b>Traitement du signal : </b> Filtrage, traiement temporel/fréquentiel, analyses temps-fréquence, image processing. </li>
+                        <li><b>Machine Learning : </b> Régression linéaire simple/multiple/logistique, SVM, KNN, Artificial Neural Network, cross-validation,
+                          LDA, Naive Bayes, Random Forest </li>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2 ">
+                    <div class="competence">
+                        <span class="fa fa-heart fa-3x"></span>
+                        <h5>Other / Hobbies</h5>
+                        <hr>
+                        <li><b>Sports : </b> Ju-Jitsu, Musculation poid du corps, Parkour, Handball</li>
+                        <li><b>Musique : </b> Rap (Lucio Bukowski), Rock/Neo rock (SOD, linkin park, limp bizkit,...), musique classique (Chopin, Mozart,...) </li>
+                        <li><b>Culture :</b> littérature scientifique, littérature fantastique, cinéma (Nolan)</li>
+                    </div>
+                </div>
+
+
+            </div><!-- end row-->
+
+        </div><!-- end container-fluid-->
+
+    </section><!-- end section skills-->
+
+
+
+    <!-- Formation/Education ////////////////////////////////////////////////////-->
+
+    
+
+    <!-- ================ EDUCATION AVEC CAROUSEL =========================================-->
+    <!-- Carrousel bootstrap !!-->
+    <div id="formations" class="carousel slide" data-ride="carousel">
+
+        <ol class="carousel-indicators">
+          <!--li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          -->
+          <img src="{% static 'media/Logo_ICL.jpg' %}" data-target="#formations" data-slide-to="0" class="active">
+          <img src="{% static 'media/logophelma.jpg' %}"data-target="#formations" data-slide-to="1">
+          <img src="{% static 'media/Logo_VH.png' %}" data-target="#formations" data-slide-to="2" >
+          <img src="{% static 'media/icon_Allende.png' %}" data-target="#formations" data-slide-to="3">
+        </ol>
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+                <img class="first-slide" src="{% static 'media/Imperial_College_RSM.jpg' %}" alt="First slide">
+                <div class="container">
+
+                    <div class="title"><h2>Formation / Education</h2> <div id="line"></div> </div>
+                    <div class="carousel-caption text-left">
+                        <h2>Imperial College London - Occasionnal (ERASMUS+ exchange)</h2>
+                        <p> <b> 2018-2019 </b>  Imperial Colledge London, Bioengineering department, Biomedical Engineering
+                        One year at ICL to study neurosciences (brain-machine-interface, computationnal neurosciences and neurosciences) in addition of machine learning and biomedical imaging. </p>
+
+                    </div>
+                </div>
+          </div>
+
+          <div class="carousel-item">
+                <img class="second-slide" src="{% static 'media/Phelma_photo.jpeg' %}" alt="Second slide">
+                <div class="container">
+                    <div class="title"><h2>Formation / Education</h2> <div id="line"></div> </div>
+                    <div class="carousel-caption">
+                        <h2>Grenoble INP Phelma - Etude d'ingénieur</h2>
+                        <p> <b> 2016-2019 </b>  Ecole d'Ingénieur de physique, électronique et matériaux Grenoble INP (Phelma), Biomedical Engineering, 38000 Grenoble </p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    </div>
+                </div>
+          </div>
+
+          <div class="carousel-item">
+                <img class="third-slide" src="{% static 'media/Lycee_Victor_Hugo.jpg' %}" alt="Third slide">
+                <div class="container">
+                    <div class="title"><h2>Formation / Education</h2> <div id="line"></div> </div>
+                    <div class="carousel-caption text-right">
+                        <h2>CPGE PCSI/PC* au Lycée Victor Hugo </h2>
+                        <p> <b> 2013-2016 </b>   Classe préparatoire aux concours d'école d'ingénieur, Lycée Victor Hugo, 14000 Caen  </p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                    </div>
+                </div>
+          </div>
+
+
+            <div class="carousel-item">
+                <img class="forth-slide" src="{% static 'media/Lycee_Salvador_Allende.jpg' %}" alt="Third slide">
+                <div class="container">
+                    <div class="title"><h2>Formation / Education</h2> <div id="line"></div> </div>
+                    <div class="carousel-caption">
+                        <h2>Baccalauréat série S - Lycée Salvador Allende </h2>
+                        <p> <b> 2013 </b>  Baccalauréat mention Assez Bien, lycée Salvador Allende, 14200 Hérouville-Saint-Clair
+                        </p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end carousel inner-->
+
+        <a class="carousel-control-prev" href="#formations" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#formations" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+
+
+    <!--Experience ////////////////////////////////////////////////////-->
+    <section id="experiences">
+
+        <h2>Expériences</h2>
+        <div id="line"></div>
+
+        <!-- Contenu de la section experience dans container-fluid -->
+        <div class="container-fluid" style="padding-top:20px;">
+
+
+            <div class="row">
+
+                <div class="col-md-5  experience-ing-crnl">
+                    <img src="{% static 'media/Logo_CRNL.gif' %}" alt="logo CRNL">
+                </div>
+                <div class="col-md-7 ">
+                    <h3><b>Centre de Recherche en Neurosciences de Lyon</b>, ingénieur d'études et de recherche</h3>
+                    <h6>NOV 2019 - DEC 2019</h6>
+                    <ul>
+                        <li>Traitement de données issues de la souris durant des phases de sommeil </li>
+                        <li>Construction d'une database pour appliquer des méthodes de machine learning non supervisées   </li>
+                    </ul>
+
+                </div>
+            </div><!-- end div row -->
+
+
+            <hr>
+            <div class="row">
+                <div class="col-md-5 order-md-2 experience-imp">
+                    <img src="{% static 'media/Logo_ICL.jpg' %}" alt="logo imperial">
+                </div>
+                <div class="col-md-7 order-md-1">
+                    <h3><b>Imperial Colledge London</b>, Projet de fin d'études    </h3>
+                    <h6>JAN 2019 - JUN 2019</h6>
+                    <ul>
+                        <li>Music processing in the brain, in the Sensory Neuroengineering Lab  </li>
+                        <li>Designing neuroscientific protocol, performing EEG on several subjects, leading EEG data processing  </li>
+                    </ul>
+
+                </div>
+            </div><!-- end div row -->
+
+            <hr>
+            <div class="row">
+                <div class="col-md-5 experience-stg-crnl">
+                    <img src="{% static 'media/Logo_CRNL.gif' %}" alt="logo CRNL">
+                </div>
+
+                <div class="col-md-7 ">
+                    <h3><b>Centre de Recherche en Neurosciences de Lyon</b>, stage ingénieur au sein de l'équipe en essor AcCoRD    </h3>
+                    <h6>MAI 2018 - AUG 2018</h6>
+                    <ul>
+                        <li>Traitement de données EEG de patients atteints de la maladie de Parkinson durant un protocole test d'inhibition motrice   </li>
+                        <li>Analyses temps/fréquence, séparations aveugles de sources, prétraitements   </li>
+                    </ul>
+
+                </div>
+            </div><!-- end div row -->
+
+            <hr>
+            <div class="row">
+                <div class="col-md-5 order-md-2 experience-bosch">
+                    <img src="{% static 'media/Logo_Bosch.jpg' %}" alt="logo Bosch">
+                </div>
+                <div class="col-md-7 order-md-1">
+                    <h3><b>Bosch Mondeville</b>, stage opérateur - ouvrier sur chaine de montage  </h3>
+                    <h6>JUN 2017 - JUL 2017</h6>
+                    <ul>
+                        <li>Assemblage de connecteurs sur les cartes électroniques d'unité de commande de véhicule  </li>
+                        <li>Direction de la machine à braser et inspection visuelle des composants (à l'oeil et/ou à l'ordinateur) </li>
+                    </ul>
+
+                </div>
+            </div><!-- end div row -->
+
+
+
+        </div><!-- end div container-fluid-->
+
+    </section><!-- end section experiences-->
+
+
+
+
+
+    <!-- Portfollio ? ////////////////////////////////////////////////////-->
+    <!--
+
+    <section id="portfollio">
+        <h2>Portfollio</h2>
+        <div id="line"></div>
+
+    </section>
+
+    -->
+
+
+
+    <!-- ================================================== -->
+    <!-- ====== Pied de page (footer) ===================== -->
+    <!-- ================================================== -->
+    <footer>
+        <p>
+            Gaugain Gabriel, Copyright &copy; INTI-FORMATION 2020
+
+        </p>
+    </footer><!-- end footer-->
+
+
+
+
+    <!-- ======================== SCRIPTS JS ====================================================-->
+
+    <!-- lien vers jquery -->
+    <script src="{%  static 'js/jquery-3.4.1.js' %}" ></script>
+
+    <!-- lien vers bootstrap -->
+    <script src="{%  static 'js/bootstrap.js' %}"></script>
+
+    <!-- lien ver typed (animation texte qui se tape tout seul) -->
+    <script src="{% static 'js/typed.min.js' %}">  </script>
+
+    <!-- Lien vers monscript perso -->
+    <script src="{% static 'js/script_CV.js' %}"></script>
+
+</body>
+
+
+
+</html>
